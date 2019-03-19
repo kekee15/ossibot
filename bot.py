@@ -20,7 +20,7 @@ def get_json_from_url(url):
 
 
 def get_updates(offset=None):
-    url = URL + "getUpdates?timeout=20"
+    url = URL + "getUpdates?timeout=100"
     if offset:
         url += "&offset={}".format(offset)
     js = get_json_from_url(url)
