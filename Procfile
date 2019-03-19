@@ -1,1 +1,1 @@
-bot: python bot.py $PORT
+bot: heroku ps:scale web=0
