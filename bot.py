@@ -20,7 +20,7 @@ def get_json_from_url(url):
 
 
 def get_updates(offset=None):
-    url = URL + "getUpdates?timeout=1"
+    url = URL + "getUpdates?timeout=20"
     if offset:
         url += "&offset={}".format(offset)
     js = get_json_from_url(url)
@@ -62,7 +62,7 @@ def main():
         if len(updates["result"]) > 0:
             last_update_id = get_last_update_id(updates) + 1
             echo_all(updates)
-        time.sleep(0)
+        time.sleep(0.5)
 
 
 if __name__ == '__main__':
